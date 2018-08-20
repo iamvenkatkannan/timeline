@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Timeline</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <style>
+            .timeline {
+                position: relative;
+                max-width: 800px;
+                margin: 0 auto;
+                padding-top: 20px;
+                background-color: inherit;
+            }
+
+            .timeline:after {
+                content: '';
+                position: absolute;
+                width: 5px;
+                background-color: #3290B1;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                margin-left: 17px;
+            }
+
+            .timeline--first:after {
+                top: 20px;
+            }
+
+            .era {
+                text-align: center;
+                position: relative;
+                z-index: 1;
+                padding-bottom: 20px;
+            }
+
+            .era__title {
+                background-color: #3290B1;
+                color: #EEEEEE;
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: default;
+            }
+
+            .entry {
+                padding: 10px 30px 40px 30px;
+                width: 50%;
+                position: relative;
+                background-color: inherit;
+            }
+
+            ul li.entry:nth-of-type(2n){
+                margin-left: 50%;
+            }
+
+            .entry__content {
+                padding: 20px 30px;
+                background-color: #EEEEEE;
+                position: relative;
+                border-radius: 4px;
+                cursor: default;
+                transition: all 0.3s ease 0s;
+                box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
+            }
+
+            .entry__content:hover {
+                background-color: #FFFFFF;
+            }
+
+            .entry:before {
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 20px;
+                width: 0;
+                z-index: 1;
+            }
+
+            ul li.entry:nth-of-type(2n):after {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: -12px;
+                background-color: #EEEEEE;
+                border: 4px solid #3290B1;
+                top: 20px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            .entry:after {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                right: -12px;
+                background-color: #EEEEEE;
+                border: 4px solid #3290B1;
+                top: 20px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+
+            @media all and (max-width: 500px) {
+                .timeline:after {
+                    left: 33.75px;
+                }
+                .era {
+                    text-align: left;
+                    padding-left: 31.875px;
+                }
+                .entry {
+                    width: 100%;
+                    margin-left: 0;
+                    padding-left: 64px;
+                    padding-right: 20px;
+                }
+                .entry:before {
+                    right: auto;
+                    left: 56px;
+                    margin-left: 0;
+                }
+                .entry:after {
+                    left: 2px;
+                }
+                ul li.entry:nth-of-type(2n){margin-left: 0}
+                ul li.entry:nth-of-type(2n):after{left: 2px}
+            }
+        </style>
+
+
+        <div class="timeline-wrap" style="background-color: #272727">
+            <ul class="timeline timeline--first">
+                <li class="era">
+                    <h2 class="era__title">2018-2019</h2>
+                </li>
+                <li class="entry">
+                    <div class="entry__content wow animated fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h2>Bacon Ipsum</h2>
+                        <p>Bacon ipsum dolor amet ball tip jerky sirloin pancetta capicola prosciutto meatball pig leberkas cow pork chop shank meatloaf.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <div class="entry__content wow animated fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h2>Bacon Ipsum</h2>
+                        <p>Ground round short ribs fatback, salami shoulder sausage chuck shankle landjaeger drumstick ribeye meatloaf doner.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <div class="entry__content wow animated fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h2>Bacon Ipsum</h2>
+                        <p>Swine pork belly prosciutto jowl pork chop chicken filet mignon cupim doner boudin.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
